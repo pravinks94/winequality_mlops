@@ -60,8 +60,8 @@ def train_and_evaluate(config_path):
     print("ElasticNet Model (alpha=%f,l1_ratio=%f):"%(alpha,l1_ratio))
     print(" RMSE: %s"%rmse)
     print(" MAE: %s"%mae)
-    print(" R2: %s",r2)
-
+    print(" R2: %s"%r2)
+    
     scores_file = config["reports"]["scores"]
     params_file = config["reports"]["params"]
 
@@ -85,10 +85,6 @@ def train_and_evaluate(config_path):
     model_path = os.path.join(model_dir, "model.joblib")
 
     joblib.dump(lr, model_path)
-
-
-
-
 
 
 
